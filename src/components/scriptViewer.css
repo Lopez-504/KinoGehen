@@ -1,0 +1,41 @@
+.script-content {
+  height: 100%;
+  overflow-y: auto;
+  padding: 2rem 2.5rem;
+
+  background: #ebe9d300;
+  color: #292725;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.script-element {
+  margin: 0;
+}
+
+.script-element.action {
+  margin-bottom: 1.2rem;
+  font-style: italic;
+  color: #7b7a7aeb;
+  font-size: 1.0rem;
+}
+
+.script-element.character {
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+
+  text-align: center;
+
+  font-size: 0.82rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  color: rgb(245, 175, 79);
+}
+
+.script-element.dialogue {
+  max-width: 80%;
+  margin: 0 auto 1.5rem;
+  color: rgb(207, 207, 208);
+}

@@ -1,0 +1,275 @@
+/* =========================
+   General
+   ========================= */
+
+.landing-page {
+  background: #111117;
+  color: #eeeae2;
+}
+
+/* =========================
+   Hero
+   ========================= */
+
+.landing-hero {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  padding: 0rem 3vw;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(24, 23, 22, 0.98),
+      rgba(24, 23, 22, 0.72),
+      rgba(24, 23, 22, 0.35)
+    ),
+    url("/images/empireOfTheSun-wallpaper.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 950px;
+}
+
+.hero-kicker,
+.section-label {
+  margin: 0 0 1.7rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+
+  color: #c9c8c5;
+}
+
+.hero-content h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: normal;
+  line-height: 0.95;
+
+  color: #f5f1e8;
+}
+
+.hero-description {
+  max-width: 560px;
+
+  margin: 2rem 6rem;    /* vertical horizontal ? */ 
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+
+  color: #c9c4bb;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
+  border: 1px solid #aaa49a;
+  color: #f5f1e8;
+  font-family: Georgia, "Times New Roman", serif;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.hero-button:hover {
+  background: #f5f1e8;
+  color: #181716;
+}
+
+
+/* =========================
+   Introduction
+   ========================= */
+
+.landing-introduction {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.landing-introduction h2 {
+  margin: 0 0 2rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: normal;
+
+  color: #f5f1e8;
+}
+
+.landing-introduction > p:last-child {
+  max-width: 750px;
+
+  margin: 0;
+  padding: 0rem 4rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+
+  color: #c9c4bb;
+}
+
+
+/* =========================
+   Section cards
+   ========================= */
+
+.landing-sections {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  padding: 4rem 3rem 9rem;
+}
+
+.section-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid #393633;
+  border-left: 1px solid #393633;
+}
+
+.landing-card {
+  min-height: 330px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2.5rem;
+
+  border-right: 1px solid #393633;
+  border-bottom: 1px solid #393633;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.landing-card:hover {
+  background: #211f1d;
+}
+
+.card-number {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.0rem;
+  letter-spacing: 0.15em;
+
+  color: #77736c;
+}
+
+.landing-card h3 {
+  margin: 3rem 0 1rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.3rem;
+  font-weight: normal;
+
+  color: #f5f1e8;
+}
+
+.landing-card p {
+  max-width: 450px;
+
+  margin: 0;
+  padding: 0rem 4rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+
+  color: #aaa49a;
+}
+
+.card-link {
+  margin-top: auto;
+  padding-top: 2rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.0rem;
+
+  color: #ddd8cf;
+}
+
+
+/* =========================
+   Closing
+   ========================= */
+
+.landing-closing {
+  padding: 7rem 0rem;
+  text-align: center;
+  border-top: 1px solid #393633;
+}
+
+.landing-closing p {
+  max-width: 1300px;
+
+  margin: 0 auto 1.5rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.4rem, 2vw, 2.5rem); /* min, ideal, max */
+  font-style: italic;
+  line-height: 1.5;
+
+  color: #ddd8cf;
+}
+
+.landing-closing span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+  color: #7e7c78;
+  margin-bottom: 20px;   /*not working*/
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 750px) {
+
+  .landing-hero {
+    padding: 4rem 2rem;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-sections {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .landing-introduction {
+    padding: 6rem 1.5rem;
+  }
+
+  .landing-card {
+    min-height: 280px;
+    padding: 2rem;
+  }
+}

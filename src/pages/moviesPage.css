@@ -1,0 +1,180 @@
+/* =========================
+   Movie Page
+   ========================= */
+
+.movie-page {
+  min-height: 100vh;
+  background: #181716;
+  color: rgb(148, 80, 2);
+  padding-bottom: 6rem;
+}
+
+
+/* =========================
+   Movie Header
+   ========================= */
+
+.movie-header {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 6rem;
+
+  align-items: center;
+}
+
+.movie-header img {   /* old */
+  width: 100%;
+  display: block;
+
+  border-radius: 45px;
+ 
+  box-shadow:
+    0 5px 30px #f4980dea;
+}
+
+.movie-header h1 {
+  margin: 0rem 0rem 1.5rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: normal;
+  line-height: 1.05;
+
+  color: #f5f1e8;
+}
+
+.movie-header p {
+  max-width: 900px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  line-height: 1.8;
+
+  color: #e5e3df;
+}
+
+
+/* =========================
+   Cast
+   ========================= */
+
+.movie-header h2 {
+  margin: -0.5rem 0rem 1.8rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #d78a06c9;
+}
+
+.movie-header h3 {
+  margin: 4.5rem 0rem 1.8rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #d78a06c9;
+}
+
+.movie-header ul {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.8rem;
+
+  list-style: inside;
+}
+
+.movie-header li {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  color: #ddd8cf;
+}
+
+.movie-header li:first-child {
+  color: rgb(234, 150, 6);
+}
+
+
+/* =========================
+   Scenes
+   ========================= */
+
+.movie-scenes {
+  width: 100%;
+  border-top: 1px solid #393633;
+}
+
+.scene-section {
+  min-height: 90vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 1rem 3vw;            /* vertical horizontal*/
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 800px) {
+
+  .movie-header {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+    padding: 3rem 2rem;
+  }
+
+  .movie-header img {
+    width: min(280px, 70%);
+    margin: 0 auto;
+  }
+
+  .movie-header h1 {
+    font-size: 3rem;
+  }
+
+  .scene-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .movie-header {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .movie-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .movie-header p {
+    font-size: 1rem;
+  }
+
+  .movie-header ul {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .scene-section {
+    padding: 2rem 1rem;
+  }
+}

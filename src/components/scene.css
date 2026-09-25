@@ -1,0 +1,52 @@
+.scene {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1rem;
+  max-width: 1800px;
+  margin: 0 auto;
+  min-height: 650px;
+}
+
+.scene-video {
+  display: flex;
+  align-items: center;
+}
+
+.scene-video video {
+  width: 100%;
+  display: block;
+  border-width: 3px;
+  border-color: azure;
+}
+
+.scene-script {
+  height: 610px;
+  overflow: hidden;
+
+  background: #f5f1e800;
+  border: 1px solid #d8d0c2;
+  border-radius: 3px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.script-header {
+  padding: 1.5rem 2rem 1rem;
+  border-bottom: 1px solid #d8c2c2;
+}
+
+.script-header span {
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: #777;
+}
+
+.script-header h3 {
+  margin: 0.4rem 0 0;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 1.35rem;
+}
+
