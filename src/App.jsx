@@ -3,15 +3,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 import LandingPage from "./pages/LandingPage";
-import MoviesPage from "./pages/MoviesPage";
+import MoviesCatalogue from "./pages/MoviesCatalogue"
 import MoviePage from "./pages/MoviePage";
-import DirectorsPage from "./pages/DirectorsPage";
-import ActorsPage from "./pages/ActorsPage";
 import QuotesPage from "./pages/QuotesPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+
+      <ScrollToTop />
 
       <Navbar />
 
@@ -23,12 +24,13 @@ function App() {
           element={<LandingPage />}
         />
 
-        {/* Movies */}
+        {/* Movies catalogue */}
         <Route
           path="/movies"
-          element={<MoviesPage movieId='life-is-beautiful'/>}
+          element={<MoviesCatalogue type='movies' />}
         />
 
+        {/* Individual movie */}
         <Route
           path="/movies/:movieId"
           element={<MoviePage />}
@@ -37,12 +39,12 @@ function App() {
         {/* Other sections */}
         <Route
           path="/directors"
-          element={<DirectorsPage />}
+          element={<MoviesCatalogue type='directors' />}
         />
 
         <Route
           path="/actors"
-          element={<ActorsPage />}
+          element={<MoviesCatalogue type='actors' />}    
         />
 
         <Route

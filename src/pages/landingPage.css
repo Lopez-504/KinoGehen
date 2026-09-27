@@ -20,9 +20,9 @@
   background:
     linear-gradient(
       to right,
-      rgba(24, 23, 22, 0.98),
-      rgba(24, 23, 22, 0.72),
-      rgba(24, 23, 22, 0.35)
+      rgba(31, 31, 31, 0.445),
+      rgba(24, 23, 22, 0.47),
+      rgba(250, 250, 250, 0.163)
     ),
     url("/images/empireOfTheSun-wallpaper.jpg");
 
@@ -90,15 +90,15 @@
 
 .landing-introduction {
   max-width: 850px;
-  margin: 0 auto;
-  padding: 6rem 2rem;
+  margin: 0 auto;             /* (top and bottom) (right and left) */
+  padding: 6rem 2rem;         /* (top and bottom) (right and left) */
 }
 
 .landing-introduction h2 {
-  margin: 0 0 2rem;
+  margin: 0 0 2rem;              /* (top) (right and left) (bottom) */ 
 
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);        /* min, ideal, max */
   font-weight: normal;
 
   color: #f5f1e8;
@@ -108,7 +108,7 @@
   max-width: 750px;
 
   margin: 0;
-  padding: 0rem 4rem;
+  padding: 0rem 4rem;     /* (top and bottom) (right and left) */
 
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.15rem;

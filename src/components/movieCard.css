@@ -1,0 +1,264 @@
+/* =========================
+   Card
+   ========================= */
+
+.movie-card {
+  height: 560px;
+
+  perspective: 1200px;
+}
+
+
+/* =========================
+   Inner
+   ========================= */
+
+.movie-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.movie-card.flipped .movie-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+/* =========================
+   Front & Back
+   ========================= */
+
+.movie-card-front,
+.movie-card-back {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  border: 1px solid #393633;
+  border-radius: 6px;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   Front
+   ========================= */
+
+.movie-card-front {
+  display: flex;
+  flex-direction: column;
+
+  background: #211f1d;
+}
+
+.movie-card-front .movie-cover {
+  flex: 1;
+
+  min-height: 0;
+}
+
+.movie-card-front .movie-cover img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+.movie-card-front-info {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: 1rem 1.2rem 0.5rem;
+}
+
+.movie-card-front-info h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  font-weight: normal;
+
+  color: #f5f1e8;
+}
+
+.movie-card-front-info span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+
+  color: rgb(188, 187, 184);
+}
+
+
+/* =========================
+   Back
+   ========================= */
+
+.movie-card-back {                            
+  transform: rotateY(180deg);
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 0rem;
+                            /* background handled in component */    
+  color: #292725;
+  border: #f5f1e8 solid 3px;
+}
+
+.movie-card-year {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+
+  padding-top: 1rem;
+
+  color: #5b5a58;
+}
+
+.movie-card-back h2 {
+  margin: 0.6rem 0.7rem 0.2rem;           /* top, left-right, bottom */
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 500;
+
+  color: #292725;
+}
+
+.movie-card-director {
+  margin: 0 0 1.5rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-style: italic;
+
+  color: #a84b04;
+}
+
+.movie-card-description {
+  margin: 0 1.0rem 0.5rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+  line-height: 1.4;
+
+  color: #3f3b36;
+}
+
+
+/* =========================
+   Cast
+   ========================= */
+
+.movie-card-cast {
+  margin-top: 0.2rem;
+  
+  border-radius: 0rem;
+  padding: 1.5rem 0rem;
+}
+
+.movie-card-cast h3 {
+  margin: 0 0 0.6rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.87rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: #77736c;
+}
+
+.movie-card-cast ul {
+  margin: 0;
+  padding: 0.4rem 0rem 0.4rem ;
+
+  list-style: circle;          /* not showing */
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: #fbfadd; 
+  background: linear-gradient(to right,
+    rgba(230, 230, 230, 0.579),
+    rgb(0, 0, 0),
+    rgba(5, 5, 5, 0.904),
+    rgb(0, 0, 0),
+    rgb(4, 4, 4),
+    rgb(0, 0, 0));
+  border-radius: 12px;
+}
+
+
+/* =========================
+   Buttons
+   ========================= */
+
+.movie-card-button {
+  border: 1px solid #77736c;
+  border-radius: 10px;
+  padding: 0.5rem 0rem;
+  margin: 0rem 0.7rem 0.7rem;
+ 
+  background: transparent;
+  color: inherit;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.movie-card-button:hover {
+  background: #a15408;
+  color: #f5f1e8;
+  font-weight: 900;
+}
+
+.movie-card-flip-area {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 15%;
+
+  border: none;
+  background: rgba(30, 0, 255, 0);
+
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Back buttons */
+
+.movie-card-actions {
+  display: flex;
+  margin-top: auto;
+}
+
+.movie-card-actions .movie-card-button {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+}

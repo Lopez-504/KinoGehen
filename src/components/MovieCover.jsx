@@ -1,5 +1,3 @@
-// src/components/MovieCover.jsx
-
 import { useRef, useState } from "react";
 import "./movieCover.css";
 

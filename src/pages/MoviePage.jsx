@@ -1,8 +1,11 @@
 import { useParams } from "react-router-dom";
-import { movies } from "../data/movies";
+import { movies } from "../data/movies"
+import "./moviePage.css"
 
-function MoviePage() {
+import Scene from "../components/Scene";
+import MovieCover from "../components/MovieCover";
 
+export default function MoviePage() {
   const { movieId } = useParams();
 
   const movie = movies.find(
@@ -14,10 +17,33 @@ function MoviePage() {
   }
 
   return (
-    <main>
-      <h1>{movie.title}</h1>
+    <main className="movie-page">
+      <header className="movie-header">
+        <MovieCover movie={movie} />
+
+        <div>
+          <h1>{movie.title}</h1>
+          <h2>{movie.director} - {movie.year}</h2>
+          <p>{movie.description}</p>
+
+          <h3>- Cast -</h3>
+          <ul>
+            {movie.cast.map((actor) => (
+              <li key={actor}>{actor}</li>
+            ))}
+          </ul>
+        </div>
+      </header>
+
+      <section className="movie-scenes">
+        {movie.scenes.map((scene, index) => (
+          <Scene
+            key={scene.id}
+            scene={scene}
+            sceneNumber={index + 1}
+          />
+        ))}
+      </section>
     </main>
   );
 }
-
-export default MoviePage;

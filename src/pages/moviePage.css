@@ -26,16 +26,6 @@
   align-items: center;
 }
 
-.movie-header img {   /* old */
-  width: 100%;
-  display: block;
-
-  border-radius: 45px;
- 
-  box-shadow:
-    0 5px 30px #f4980dea;
-}
-
 .movie-header h1 {
   margin: 0rem 0rem 1.5rem;
 
